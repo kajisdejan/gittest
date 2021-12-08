@@ -50,7 +50,7 @@ class AuthController extends Controller
         ]);
 
         $user = User::create($attributes);
-        Mail::to('admin@cms.com')->send(new NewUserRegistred($user));
+        Mail::to('admin@projekat.local')->send(new NewUserRegistred($user));
 
         return redirect('/login')->with('message','Uspešno ste kreirali nalog.');
         //ako zelite da je User ulogovan po registraciji, zakomentarisiste gornju liniju koda, a otkomentarisite sledece 2
